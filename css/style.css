@@ -33,55 +33,45 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
 
-  .hero__avatar {
-    position: relative;
-    flex-shrink: 0;
-    width: 240px;
-    height: 240px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+/* ==============================
+   NOISE (textura de fundo)
+============================== */
+.noise {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
 
-  .avatar-circle {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background: var(--color-accent-dim);
-    border: 1px solid var(--color-accent);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 2;
-  }
+/* ==============================
+   HEADER
+============================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(13, 13, 13, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  transition: border-color var(--transition);
+}
 
-  .avatar-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    display: block;
-  }
-
-  .avatar-ring {
-    position: absolute;
-    border-radius: 50%;
-    border: 1px solid rgba(212, 168, 83, 0.2);
-    animation: pulse-ring 3s ease-in-out infinite;
-  }
-
-  .avatar-ring {
-    width: 200px;
-    height: 200px;
-  }
-
-  .avatar-ring--2 {
-    width: 240px;
-    height: 240px;
-    animation-delay: 1.5s;
-  }
+.header__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header__logo {
@@ -102,6 +92,7 @@ body {
   color: var(--color-text-muted);
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  text-decoration: none;
   transition: color var(--transition);
 }
 
@@ -202,29 +193,32 @@ button:focus-visible {
   flex-wrap: wrap;
 }
 
-/* Avatar */
+/* ==============================
+   AVATAR — CORRIGIDO & AUMENTADO
+   (era 200px, agora 300px)
+============================== */
 .hero__avatar {
   position: relative;
   flex-shrink: 0;
-  width: 240px;
-  height: 240px;
+  width: 360px;
+  height: 360px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-
 .avatar-circle {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   background: var(--color-accent-dim);
-  border: 1px solid var(--color-accent);
+  border: 2px solid var(--color-accent);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   z-index: 2;
+  overflow: hidden;
 }
 
 .avatar-img {
@@ -240,22 +234,19 @@ button:focus-visible {
   border-radius: 50%;
   border: 1px solid rgba(212, 168, 83, 0.2);
   animation: pulse-ring 3s ease-in-out infinite;
-}
-
-.avatar-ring {
-  width: 200px;
-  height: 200px;
+  width: 320px;
+  height: 320px;
 }
 
 .avatar-ring--2 {
-  width: 240px;
-  height: 240px;
+  width: 360px;
+  height: 360px;
   animation-delay: 1.5s;
 }
 
 @keyframes pulse-ring {
   0%, 100% { opacity: 0.3; transform: scale(1); }
-  50% { opacity: 0.7; transform: scale(1.03); }
+  50%       { opacity: 0.7; transform: scale(1.03); }
 }
 
 /* ==============================
@@ -268,6 +259,7 @@ button:focus-visible {
   font-size: 0.9rem;
   font-weight: 400;
   letter-spacing: 0.02em;
+  text-decoration: none;
   transition: all var(--transition);
   cursor: pointer;
 }
@@ -347,6 +339,10 @@ button:focus-visible {
   color: var(--color-text-muted);
   font-size: 1rem;
   line-height: 1.8;
+}
+
+.sobre__text strong {
+  color: var(--color-text);
 }
 
 .sobre__badges {
@@ -475,6 +471,7 @@ button:focus-visible {
   font-size: 0.85rem;
   color: var(--color-accent);
   font-weight: 400;
+  text-decoration: none;
   transition: letter-spacing var(--transition);
   display: inline-block;
   margin-top: auto;
@@ -518,6 +515,7 @@ button:focus-visible {
   border-radius: 99px;
   font-size: 0.9rem;
   color: var(--color-text-muted);
+  text-decoration: none;
   transition: all var(--transition);
 }
 
@@ -597,19 +595,19 @@ button:focus-visible {
     justify-content: center;
   }
 
+  /* Avatar responsivo mobile */
   .hero__avatar {
-    width: 180px;
-    height: 180px;
+    width: 240px;
+    height: 240px;
   }
 
   .avatar-circle {
-    width: 120px;
-    height: 120px;
-    font-size: 2rem;
+    width: 200px;
+    height: 200px;
   }
 
-  .avatar-ring { width: 150px; height: 150px; }
-  .avatar-ring--2 { width: 180px; height: 180px; }
+  .avatar-ring        { width: 216px; height: 216px; }
+  .avatar-ring--2     { width: 240px; height: 240px; }
 
   .sobre__grid {
     grid-template-columns: 1fr;

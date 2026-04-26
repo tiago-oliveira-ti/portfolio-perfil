@@ -1,12 +1,41 @@
 // ==============================
+// MENU MOBILE
+// ==============================
+
+/**
+ * Controla o menu mobile com botão hamburger.
+ */
+function initMobileMenu() {
+  const toggle = document.querySelector('.header__menu-toggle');
+  const nav = document.querySelector('.header__nav');
+  const navLinks = document.querySelectorAll('.header__nav a');
+
+  if (!toggle || !nav) return;
+
+  toggle.addEventListener('click', () => {
+    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', !isOpen);
+    nav.classList.toggle('open');
+  });
+
+  // Fechar ao clicar em um link
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      toggle.setAttribute('aria-expanded', 'false');
+      nav.classList.remove('open');
+    });
+  });
+}
+
+// ==============================
 // ANIMAÇÃO DE ENTRADA (Intersection Observer)
 // ==============================
 
 /**
- * Observa elementos com a classe .fade-in e adiciona
- * .visible quando eles entram na viewport.
+ * Observa elementos e adiciona .visible quando entram na viewport.
  */
 function initFadeIn() {
+  // CORRIGIDO: seletor atualizado para .hero__avatar (era .hero__foto-perfil)
   const elements = document.querySelectorAll(
     '.hero__content, .hero__avatar, .skill-card, .project-card, .sobre__text, .sobre__badges, .contact__sub, .contact__links'
   );
@@ -89,7 +118,7 @@ function initHeaderScroll() {
 // ==============================
 
 /**
- * Implementa scroll suave com offset para o header fixo.
+ * Scroll suave com offset para o header fixo.
  */
 function initSmoothScroll() {
   const HEADER_HEIGHT = 72;
@@ -120,9 +149,7 @@ function initSmoothScroll() {
 function initFooterYear() {
   const yearSpan = document.querySelector('.footer-year');
   if (!yearSpan) return;
-
-  const currentYear = new Date().getFullYear();
-  yearSpan.textContent = currentYear;
+  yearSpan.textContent = new Date().getFullYear();
 }
 
 // ==============================
@@ -130,39 +157,10 @@ function initFooterYear() {
 // ==============================
 
 document.addEventListener('DOMContentLoaded', () => {
+  initMobileMenu();
   initFadeIn();
   initActiveNav();
   initHeaderScroll();
   initSmoothScroll();
   initFooterYear();
-  initMobileMenu();
 });
-
-// ==============================
-// MENU MOBILE
-// ==============================
-
-/**
- * Controla o menu mobile com botão hamburger.
- */
-function initMobileMenu() {
-  const toggle = document.querySelector('.header__menu-toggle');
-  const nav = document.querySelector('.header__nav');
-  const navLinks = document.querySelectorAll('.header__nav a');
-
-  if (!toggle || !nav) return;
-
-  toggle.addEventListener('click', () => {
-    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
-    toggle.setAttribute('aria-expanded', !isOpen);
-    nav.classList.toggle('open');
-  });
-
-  // Fechar ao clicar em um link
-  navLinks.forEach((link) => {
-    link.addEventListener('click', () => {
-      toggle.setAttribute('aria-expanded', 'false');
-      nav.classList.remove('open');
-    });
-  });
-}
