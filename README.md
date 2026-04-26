@@ -14,7 +14,7 @@ Abra o arquivo `index.html` diretamente no navegador ou publique nas **GitHub Pa
 ├── css/
 │   └── style.css     # Estilos, variáveis CSS, responsividade
 └── js/
-└── main.js       # Animações, nav ativa, scroll suave ```
+└── main.js       # Animações, nav ativa, scroll suave
 
 
 ## ✅ Funcionalidades
