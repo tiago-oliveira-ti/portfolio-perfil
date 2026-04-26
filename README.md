@@ -8,12 +8,13 @@ Abra o arquivo `index.html` diretamente no navegador ou publique nas **GitHub Pa
 
 ## 📁 Estrutura
 
-projeto-1-perfil/
+
+ ```  projeto-1-perfil/
 ├── index.html        # Estrutura semântica da página
 ├── css/
 │   └── style.css     # Estilos, variáveis CSS, responsividade
 └── js/
-└── main.js       # Animações, nav ativa, scroll suave
+└── main.js       # Animações, nav ativa, scroll suave ```
 
 
 ## ✅ Funcionalidades
@@ -37,7 +38,7 @@ projeto-1-perfil/
 ```bash
 git clone https://github.com/tiago-oliveira-ti/portfolio-nivel1.git
 cd projeto-1-perfil/
-open index.html
+open index.html 
 
 👤 Autor
 Tiago Oliveira  
