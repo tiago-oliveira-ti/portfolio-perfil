@@ -10,11 +10,11 @@ Abra o arquivo `index.html` diretamente no navegador ou publique nas **GitHub Pa
 
 
  ```  projeto-1-perfil/
-├── index.html        # Estrutura semântica da página
+├── index.html         # Estrutura semântica da página
 ├── css/
-│   └── style.css     # Estilos, variáveis CSS, responsividade
+│   └── style.css      # Estilos, variáveis CSS, responsividade
 └── js/
-└── main.js       # Animações, nav ativa, scroll suave
+    └── main.js        # Animações, nav ativa, scroll suave
 
 
 ## ✅ Funcionalidades
