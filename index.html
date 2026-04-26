@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio de Tiago Oliveira — Analista de QA e Desenvolvedor em formação." />
+  <title>Tiago Oliveira | QA &amp; Dev</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="noise"></div>
+
+  <header class="header">
+    <div class="header__inner">
+      <span class="header__logo">T.O</span>
+      <button class="header__menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="header__nav" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Olá, eu sou</p>
+        <h1 class="hero__title" id="hero-title">Tiago<br />Oliveira</h1>
+        <p class="hero__sub">QA em formação &amp; Desenvolvedor<br />Caruaru, Pernambuco — Brasil</p>
+        <div class="hero__cta">
+          <a href="#projetos" class="btn btn--primary">Ver projetos</a>
+          <a href="#contato" class="btn btn--ghost">Entrar em contato</a>
+        </div>
+      </div>
+      <div class="hero__foto-perfil" aria-hidden="true">
+        <div class="foto-perfil-circle">
+          <img src="img/foto.png.webp" alt="Foto de Tiago Oliveira" class="foto-perfil-img" />
+        </div>
+        <div class="foto-perfil-ring"></div>
+        <div class="foto-perfil-ring foto-perfil-ring--2"></div>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section class="section" id="sobre" aria-labelledby="sobre-title">
+      <div class="section__inner">
+        <span class="section__label">01 — Sobre</span>
+        <h2 class="section__title" id="sobre-title">Quem sou eu</h2>
+        <div class="sobre__grid">
+          <p class="sobre__text">
+            Estudante de <strong>Análise e Desenvolvimento de Sistemas</strong>, com foco em
+            Qualidade de Software (QA). Tenho experiência prática com Java, JUnit, Selenium
+            e conceitos fundamentais de testes — tudo construído com dedicação e projetos reais.
+          </p>
+          <p class="sobre__text">
+            Antes da área de tecnologia, atuei como eletricista autônomo e porteiro, o que me
+            deu disciplina, atenção aos detalhes e resiliência — habilidades que levo direto para
+            o mundo do desenvolvimento e dos testes de software.
+          </p>
+          <div class="sobre__badges">
+            <span class="chip">Java</span>
+            <span class="chip">JUnit</span>
+            <span class="chip">Selenium</span>
+            <span class="chip">Postman</span>
+            <span class="chip">SQL</span>
+            <span class="chip">Git</span>
+            <span class="chip">HTML &amp; CSS</span>
+            <span class="chip">JavaScript</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section class="section section--alt" id="habilidades" aria-labelledby="habilidades-title">
+      <div class="section__inner">
+        <span class="section__label">02 — Habilidades</span>
+        <h2 class="section__title" id="habilidades-title">O que eu faço</h2>
+        <div class="skills__grid">
+          <article class="skill-card">
+            <div class="skill-card__icon" aria-hidden="true">✦</div>
+            <h3 class="skill-card__title">Testes de Software</h3>
+            <p class="skill-card__desc">Criação de planos de teste, casos de teste, testes manuais e automatizados com foco em qualidade de entrega.</p>
+          </article>
+          <article class="skill-card">
+            <div class="skill-card__icon" aria-hidden="true">◈</div>
+            <h3 class="skill-card__title">Automação QA</h3>
+            <p class="skill-card__desc">Automação de testes com Selenium WebDriver e Java. Organização de suites de testes com JUnit e Maven.</p>
+          </article>
+          <article class="skill-card">
+            <div class="skill-card__icon" aria-hidden="true">◇</div>
+            <h3 class="skill-card__title">Testes de API</h3>
+            <p class="skill-card__desc">Validação de endpoints REST usando Postman. Criação de coleções documentadas e exportadas para portfólio.</p>
+          </article>
+          <article class="skill-card">
+            <div class="skill-card__icon" aria-hidden="true">○</div>
+            <h3 class="skill-card__title">Desenvolvimento Web</h3>
+            <p class="skill-card__desc">Interfaces responsivas com HTML, CSS e JavaScript. Consumo de APIs públicas e boas práticas de semântica.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projetos -->
+    <section class="section" id="projetos" aria-labelledby="projetos-title">
+      <div class="section__inner">
+        <span class="section__label">03 — Projetos</span>
+        <h2 class="section__title" id="projetos-title">Portfólio</h2>
+        <div class="projects__grid">
+          <article class="project-card">
+            <div class="project-card__top">
+              <span class="project-tag">QA</span>
+              <span class="project-tag project-tag--java">Java</span>
+            </div>
+            <h3 class="project-card__title">Automação Selenium</h3>
+            <p class="project-card__desc">Testes automatizados de login e fluxo de compra no site saucedemo.com usando Selenium + JUnit.</p>
+            <a href="https://github.com/tiago-oliveira-ti" class="project-card__link" target="_blank" rel="noopener noreferrer">Ver no GitHub →</a>
+          </article>
+          <article class="project-card">
+            <div class="project-card__top">
+              <span class="project-tag">QA</span>
+              <span class="project-tag project-tag--api">API</span>
+            </div>
+            <h3 class="project-card__title">Testes com Postman</h3>
+            <p class="project-card__desc">Coleção de testes na API ViaCEP com validação de status, estrutura de resposta e casos de erro.</p>
+            <a href="https://github.com/tiago-oliveira-ti" class="project-card__link" target="_blank" rel="noopener noreferrer">Ver no GitHub →</a>
+          </article>
+          <article class="project-card">
+            <div class="project-card__top">
+              <span class="project-tag">Frontend</span>
+              <span class="project-tag project-tag--js">JS</span>
+            </div>
+            <h3 class="project-card__title">Calculadora Web</h3>
+            <p class="project-card__desc">Calculadora funcional com HTML, CSS e JavaScript puro. Interface limpa com suporte a teclado.</p>
+            <a href="https://github.com/tiago-oliveira-ti" class="project-card__link" target="_blank" rel="noopener noreferrer">Ver no GitHub →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="section section--alt" id="contato" aria-labelledby="contato-title">
+      <div class="section__inner contact__inner">
+        <span class="section__label">04 — Contato</span>
+        <h2 class="section__title" id="contato-title">Vamos conversar?</h2>
+        <p class="contact__sub">Estou aberto a oportunidades em QA e desenvolvimento. Me encontre nas plataformas abaixo:</p>
+        <div class="contact__links">
+          <a class="contact__btn" href="https://linkedin.com/in/tiago-oliveira-ti" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a class="contact__btn" href="https://github.com/tiago-oliveira-ti" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Feito com HTML, CSS e JS por <strong>Tiago Oliveira</strong> — <span class="footer-year">2025</span></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
